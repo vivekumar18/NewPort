@@ -28,14 +28,6 @@ const galleryPhotos = [
     description: "Outdoor evening pose at sunset park.",
   },
   {
-    id: 4,
-    title: "Evening Reflection",
-    category: "Outdoors",
-    image: "/image/img3.jpeg",
-    location: "Noida, UP",
-    description: "Casual evening walk portrait.",
-  },
-  {
     id: 5,
     title: "Urban Night Portrait",
     category: "Outdoors",
