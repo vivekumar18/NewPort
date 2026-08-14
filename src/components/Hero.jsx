@@ -10,10 +10,10 @@ export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-blue-500/10 dark:bg-blue-600/10 rounded-full blur-[130px] pointer-events-none -z-10"></div>
       <div className="absolute top-1/3 right-10 w-[350px] h-[350px] bg-indigo-500/10 dark:bg-indigo-600/10 rounded-full blur-[110px] pointer-events-none -z-10"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 xl:gap-8 items-center">
           
-          {/* Left Hero Content */}
+          {/* Left Hero Content (approx 55% width) */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -177,20 +177,20 @@ export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
 
           </motion.div>
 
-          {/* Right Hero Visual Area */}
+          {/* Right Hero Visual Area (approx 45% width) */}
           <motion.div 
             initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.15 }}
-            className="lg:col-span-5 relative"
+            className="lg:col-span-5 relative flex justify-center lg:justify-end"
           >
-            <div className="relative mx-auto max-w-xs sm:max-w-sm lg:max-w-sm">
+            <div className="relative w-full max-w-[460px] lg:max-w-none">
               
               {/* Subtle outer ring shadow */}
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur-md opacity-15 pointer-events-none"></div>
 
               {/* Main Developer Visual Panel */}
-              <div className={`relative rounded-3xl p-3.5 overflow-hidden border shadow-xl ${
+              <div className={`relative rounded-3xl p-3.5 sm:p-4 overflow-hidden border shadow-xl ${
                 darkMode ? 'glass-panel-dark' : 'glass-panel-light'
               }`}>
                 
