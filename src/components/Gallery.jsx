@@ -20,14 +20,6 @@ const galleryPhotos = [
     description: "Portrait shot at India Gate national monument.",
   },
   {
-    id: 3,
-    title: "Sunset Promenade",
-    category: "Outdoors",
-    image: "/image/img2.jpeg",
-    location: "Noida, UP",
-    description: "Outdoor evening pose at sunset park.",
-  },
-  {
     id: 5,
     title: "Urban Night Portrait",
     category: "Outdoors",
