@@ -212,9 +212,9 @@ export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
                 {/* Avatar Image Container */}
                 <div className="relative rounded-2xl overflow-hidden mb-4 group aspect-square bg-slate-950">
                   <img 
-                    src={personalDetails.avatarFull} 
+                    src={personalDetails.avatar} 
                     alt="Vivek Kumar - Full Stack Developer" 
-                    className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-[90%_15%] transform group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
                   
