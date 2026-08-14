@@ -1,17 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaArrowRight, FaCode, FaCircleCheck, FaLaptopCode, FaWandMagicSparkles } from 'react-icons/fa6';
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaArrowRight, FaCode, FaCircleCheck, FaLaptopCode, FaWandMagicSparkles, FaGraduationCap, FaBriefcase, FaFolderOpen, FaAward } from 'react-icons/fa6';
 import { personalDetails } from '../data/portfolioData';
 
 export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
   return (
-    <section id="home" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
+    <section id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
       {/* Background ambient glow shapes */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 dark:bg-blue-600/15 rounded-full blur-[140px] pointer-events-none -z-10 animate-blob"></div>
-      <div className="absolute top-1/3 right-10 w-[400px] h-[400px] bg-indigo-500/10 dark:bg-indigo-600/15 rounded-full blur-[120px] pointer-events-none -z-10 animate-blob animation-delay-2000"></div>
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-blue-500/10 dark:bg-blue-600/15 rounded-full blur-[140px] pointer-events-none -z-10 animate-blob"></div>
+      <div className="absolute top-1/3 right-10 w-[450px] h-[450px] bg-indigo-500/10 dark:bg-indigo-600/15 rounded-full blur-[120px] pointer-events-none -z-10 animate-blob animation-delay-2000"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
           
           {/* Left Hero Content */}
           <motion.div 
@@ -25,7 +25,7 @@ export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-6 border ${
+              className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-5 border ${
                 darkMode 
                   ? 'bg-slate-800/80 text-blue-400 border-blue-500/30' 
                   : 'bg-blue-50 text-blue-700 border-blue-200'
@@ -39,24 +39,24 @@ export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
             </motion.div>
 
             {/* Name */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-4">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-3">
               Hi, I'm <span className={darkMode ? 'gradient-text' : 'gradient-text-light'}>{personalDetails.name}</span> 👋
             </h1>
 
             {/* Title / Role */}
-            <div className="flex items-center gap-2 flex-wrap mb-6">
+            <div className="flex items-center gap-2 flex-wrap mb-4">
               <span className={`text-xl sm:text-2xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>
                 {personalDetails.title}
               </span>
             </div>
 
             {/* Short Bio */}
-            <p className={`text-base sm:text-lg leading-relaxed mb-8 max-w-2xl ${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>
+            <p className={`text-base sm:text-lg leading-relaxed mb-6 max-w-2xl ${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>
               {personalDetails.tagline}
             </p>
 
             {/* Hero CTAs */}
-            <div className="flex flex-wrap items-center gap-4 w-full sm:w-auto mb-10">
+            <div className="flex flex-wrap items-center gap-3.5 w-full sm:w-auto mb-6">
               {/* View Work */}
               <a
                 href="#projects"
@@ -92,51 +92,88 @@ export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
               </a>
             </div>
 
-            {/* Social Channels */}
-            <div className="flex items-center gap-4 pt-4 border-t border-slate-200/40 dark:border-slate-800/60 w-full">
-              <span className={`text-xs font-semibold uppercase tracking-wider ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
-                Connect with me:
-              </span>
-              <div className="flex items-center gap-3">
-                <a
-                  href={personalDetails.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn"
-                  className={`p-2.5 rounded-xl border transition-all duration-200 hover:scale-110 ${
-                    darkMode 
-                      ? 'bg-slate-800/80 border-slate-700 text-blue-400 hover:bg-blue-600 hover:text-white hover:border-blue-500' 
-                      : 'bg-slate-100 border-slate-200 text-blue-600 hover:bg-blue-600 hover:text-white hover:border-blue-600'
-                  }`}
-                >
-                  <FaLinkedin className="text-lg" />
-                </a>
+            {/* Social Channels & Quick Stats */}
+            <div className="w-full pt-4 border-t border-slate-200/40 dark:border-slate-800/60 space-y-4">
+              <div className="flex items-center gap-4">
+                <span className={`text-xs font-semibold uppercase tracking-wider ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
+                  Connect with me:
+                </span>
+                <div className="flex items-center gap-3">
+                  <a
+                    href={personalDetails.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn"
+                    className={`p-2.5 rounded-xl border transition-all duration-200 hover:scale-110 ${
+                      darkMode 
+                        ? 'bg-slate-800/80 border-slate-700 text-blue-400 hover:bg-blue-600 hover:text-white hover:border-blue-500' 
+                        : 'bg-slate-100 border-slate-200 text-blue-600 hover:bg-blue-600 hover:text-white hover:border-blue-600'
+                    }`}
+                  >
+                    <FaLinkedin className="text-lg" />
+                  </a>
 
-                <a
-                  href={personalDetails.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub"
-                  className={`p-2.5 rounded-xl border transition-all duration-200 hover:scale-110 ${
-                    darkMode 
-                      ? 'bg-slate-800/80 border-slate-700 text-slate-200 hover:bg-slate-700 hover:text-white' 
-                      : 'bg-slate-100 border-slate-200 text-slate-800 hover:bg-slate-900 hover:text-white'
-                  }`}
-                >
-                  <FaGithub className="text-lg" />
-                </a>
+                  <a
+                    href={personalDetails.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub"
+                    className={`p-2.5 rounded-xl border transition-all duration-200 hover:scale-110 ${
+                      darkMode 
+                        ? 'bg-slate-800/80 border-slate-700 text-slate-200 hover:bg-slate-700 hover:text-white' 
+                        : 'bg-slate-100 border-slate-200 text-slate-800 hover:bg-slate-900 hover:text-white'
+                    }`}
+                  >
+                    <FaGithub className="text-lg" />
+                  </a>
 
-                <a
-                  href={`mailto:${personalDetails.email}`}
-                  aria-label="Email"
-                  className={`p-2.5 rounded-xl border transition-all duration-200 hover:scale-110 ${
-                    darkMode 
-                      ? 'bg-slate-800/80 border-slate-700 text-emerald-400 hover:bg-emerald-600 hover:text-white hover:border-emerald-500' 
-                      : 'bg-slate-100 border-slate-200 text-emerald-600 hover:bg-emerald-600 hover:text-white hover:border-emerald-600'
-                  }`}
-                >
-                  <FaEnvelope className="text-lg" />
-                </a>
+                  <a
+                    href={`mailto:${personalDetails.email}`}
+                    aria-label="Email"
+                    className={`p-2.5 rounded-xl border transition-all duration-200 hover:scale-110 ${
+                      darkMode 
+                        ? 'bg-slate-800/80 border-slate-700 text-emerald-400 hover:bg-emerald-600 hover:text-white hover:border-emerald-500' 
+                        : 'bg-slate-100 border-slate-200 text-emerald-600 hover:bg-emerald-600 hover:text-white hover:border-emerald-600'
+                    }`}
+                  >
+                    <FaEnvelope className="text-lg" />
+                  </a>
+                </div>
+              </div>
+
+              {/* Quick Stat Chips Bar */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
+                <div className={`p-3 rounded-2xl border flex items-center gap-2.5 ${darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
+                  <FaGraduationCap className="text-blue-500 text-lg shrink-0" />
+                  <div>
+                    <p className={`text-xs font-extrabold ${darkMode ? 'text-white' : 'text-slate-900'}`}>8.0 / 10</p>
+                    <p className="text-[10px] text-slate-400 font-semibold">MCA CGPA</p>
+                  </div>
+                </div>
+
+                <div className={`p-3 rounded-2xl border flex items-center gap-2.5 ${darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
+                  <FaBriefcase className="text-indigo-400 text-lg shrink-0" />
+                  <div>
+                    <p className={`text-xs font-extrabold ${darkMode ? 'text-white' : 'text-slate-900'}`}>2 Internships</p>
+                    <p className="text-[10px] text-slate-400 font-semibold">Full Stack</p>
+                  </div>
+                </div>
+
+                <div className={`p-3 rounded-2xl border flex items-center gap-2.5 ${darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
+                  <FaFolderOpen className="text-emerald-400 text-lg shrink-0" />
+                  <div>
+                    <p className={`text-xs font-extrabold ${darkMode ? 'text-white' : 'text-slate-900'}`}>4 Projects</p>
+                    <p className="text-[10px] text-slate-400 font-semibold">Live & GitHub</p>
+                  </div>
+                </div>
+
+                <div className={`p-3 rounded-2xl border flex items-center gap-2.5 ${darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
+                  <FaAward className="text-amber-400 text-lg shrink-0" />
+                  <div>
+                    <p className={`text-xs font-extrabold ${darkMode ? 'text-white' : 'text-slate-900'}`}>3 Verified</p>
+                    <p className="text-[10px] text-slate-400 font-semibold">Certificates</p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -175,14 +212,14 @@ export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
                 {/* Avatar Image Container */}
                 <div className="relative rounded-2xl overflow-hidden mb-4 group aspect-square bg-slate-950">
                   <img 
-                    src={personalDetails.avatar} 
+                    src={personalDetails.avatarFull} 
                     alt="Vivek Kumar - Full Stack Developer" 
-                    className="w-full h-full object-cover object-[75%_25%] transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
                   
                   {/* Floating Overlay Badge */}
-                  <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-slate-900/80 backdrop-blur-md border border-slate-700/50 text-white flex items-center justify-between">
+                  <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-slate-900/85 backdrop-blur-md border border-slate-700/50 text-white flex items-center justify-between">
                     <div className="flex items-center gap-2.5">
                       <div className="w-8 h-8 rounded-lg bg-blue-600/30 flex items-center justify-center text-blue-400">
                         <FaCode />
@@ -205,8 +242,8 @@ export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
                   <p><span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> = &#123;</p>
                   <p className="pl-4"><span className="text-indigo-300">name</span>: <span className="text-emerald-300">"Vivek Kumar"</span>,</p>
                   <p className="pl-4"><span className="text-indigo-300">degree</span>: <span className="text-emerald-300">"MCA Graduate"</span>,</p>
-                  <p className="pl-4"><span className="text-indigo-300">stack</span>: [<span className="text-amber-300">"React"</span>, <span className="text-amber-300">"Node"</span>, <span className="text-amber-300">"Java"</span>, <span className="text-amber-300">"Python"</span>],</p>
-                  <p className="pl-4"><span className="text-indigo-300">seeking</span>: <span className="text-emerald-300">"Software Engineer Roles"</span></p>
+                  <p className="pl-4"><span className="text-indigo-300">stack</span>: [<span className="text-amber-300">"React"</span>, <span className="text-amber-300">"Node"</span>, <span className="text-amber-300">"Java"</span>, <span className="text-amber-300">"MySQL"</span>],</p>
+                  <p className="pl-4"><span className="text-indigo-300">seeking</span>: <span className="text-emerald-300 font-bold">"Full Stack / Dev Roles"</span></p>
                   <p>&#125;;</p>
                 </div>
 
