@@ -264,7 +264,7 @@ export const certifications = [
     date: "March 2025",
     credentialId: "APNA-FSWD-2025",
     icon: "code",
-    link: "https://github.com/vivekumar18",
+    link: "https://www.linkedin.com/posts/vivek-kumar-3579841a7_fullstackdevelopment-webdevelopment-apnacollege-activity-7320480921466343424-ldd-",
     skills: ["HTML5", "CSS3", "JavaScript", "React.js", "Node.js", "MySQL", "REST APIs"],
   },
   {
