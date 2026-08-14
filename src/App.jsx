@@ -36,14 +36,8 @@ export default function App() {
   // Download Real Resume Handler
   const handleDownloadResume = () => {
     confetti({ particleCount: 50, spread: 60, origin: { y: 0.7 } });
-
-    const link = document.createElement('a');
-    link.href = personalDetails.resumeUrl || '/resume/Vivek-Kumar-Resume.pdf';
-    link.download = 'Vivek-Kumar-Resume.pdf';
-    link.target = '_blank';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    const resumeUrl = personalDetails.resumeUrl || '/resume/Vivek-Kumar-Resume.pdf';
+    window.open(resumeUrl, '_blank');
   };
 
   return (
