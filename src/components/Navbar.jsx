@@ -47,8 +47,8 @@ export default function Navbar({ darkMode, setDarkMode, onOpenHireMe }) {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? darkMode ? 'glass-panel-dark shadow-xl py-3 border-b border-slate-800' : 'glass-panel-light shadow-md py-3 border-b border-slate-200'
-        : 'bg-transparent py-5'
+        ? darkMode ? 'glass-panel-dark shadow-xl py-2.5 border-b border-slate-800' : 'glass-panel-light shadow-md py-2.5 border-b border-slate-200'
+        : 'bg-transparent py-3.5 sm:py-4'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         
@@ -64,8 +64,8 @@ export default function Navbar({ darkMode, setDarkMode, onOpenHireMe }) {
             <span className={`font-extrabold text-lg tracking-tight ${darkMode ? 'text-white' : 'text-slate-900'}`}>
               Vivek<span className="text-blue-500">.dev</span>
             </span>
-            <span className="text-[10px] uppercase tracking-wider font-semibold text-blue-500/80 -mt-1">
-              MCA Software Eng.
+            <span className="text-[10px] uppercase tracking-wider font-semibold text-blue-500/90 -mt-0.5">
+              MCA • FULL STACK DEVELOPER
             </span>
           </div>
         </a>

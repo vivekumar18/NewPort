@@ -2,9 +2,9 @@
 
 export const personalDetails = {
   name: "Vivek Kumar",
-  title: "Aspiring Full Stack Developer",
-  tagline: "Building Scalable Web Applications, RESTful APIs & Enterprise Software",
-  bio: "Aspiring Full Stack Developer with hands-on experience in building responsive web applications using Java, JavaScript, React.js, Node.js, and MySQL. Skilled in developing RESTful APIs, clean user interfaces, and scalable solutions. Seeking an opportunity to contribute to real-world software engineering projects.",
+  title: "Full Stack Developer",
+  tagline: "Building scalable web applications, RESTful APIs & enterprise software.",
+  bio: "Full Stack Developer with hands-on experience in building responsive web applications using Java, JavaScript, React.js, Node.js, and MySQL. Skilled in developing RESTful APIs, clean user interfaces, and scalable solutions. Seeking an opportunity to contribute to real-world software engineering projects.",
   location: "Noida, Uttar Pradesh, India",
   email: "vivekkumar120103@gmail.com",
   phone: "+91-9576742410",

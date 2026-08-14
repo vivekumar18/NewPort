@@ -1,66 +1,64 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaArrowRight, FaCode, FaCircleCheck, FaLaptopCode, FaWandMagicSparkles, FaGraduationCap, FaBriefcase, FaFolderOpen, FaAward } from 'react-icons/fa6';
+import { FaGithub, FaLinkedin, FaEnvelope, FaDownload, FaArrowRight, FaCode, FaLaptopCode, FaWandMagicSparkles, FaGraduationCap, FaBriefcase, FaFolderOpen, FaAward } from 'react-icons/fa6';
 import { personalDetails } from '../data/portfolioData';
 
 export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
   return (
-    <section id="home" className="relative pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden">
-      {/* Background ambient glow shapes */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-blue-500/10 dark:bg-blue-600/15 rounded-full blur-[140px] pointer-events-none -z-10 animate-blob"></div>
-      <div className="absolute top-1/3 right-10 w-[450px] h-[450px] bg-indigo-500/10 dark:bg-indigo-600/15 rounded-full blur-[120px] pointer-events-none -z-10 animate-blob animation-delay-2000"></div>
+    <section id="home" className="relative pt-20 pb-12 md:pt-24 md:pb-16 overflow-hidden">
+      {/* Background ambient glow shapes - subtle & professional */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-blue-500/10 dark:bg-blue-600/10 rounded-full blur-[130px] pointer-events-none -z-10"></div>
+      <div className="absolute top-1/3 right-10 w-[350px] h-[350px] bg-indigo-500/10 dark:bg-indigo-600/10 rounded-full blur-[110px] pointer-events-none -z-10"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
           {/* Left Hero Content */}
           <motion.div 
-            initial={{ opacity: 0, y: 25 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
             className="lg:col-span-7 flex flex-col items-start"
           >
             {/* Availability Status Badge */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.2 }}
-              className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-5 border ${
+              transition={{ delay: 0.15 }}
+              className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-4 border ${
                 darkMode 
                   ? 'bg-slate-800/80 text-blue-400 border-blue-500/30' 
                   : 'bg-blue-50 text-blue-700 border-blue-200'
               }`}
             >
-              <span className="relative flex h-2.5 w-2.5">
+              <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
               <span>Available for Software Developer Roles</span>
             </motion.div>
 
-            {/* Name */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-3">
+            {/* Main Greeting */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1] mb-2.5">
               Hi, I'm <span className={darkMode ? 'gradient-text' : 'gradient-text-light'}>{personalDetails.name}</span> 👋
             </h1>
 
-            {/* Title / Role */}
-            <div className="flex items-center gap-2 flex-wrap mb-4">
-              <span className={`text-xl sm:text-2xl font-bold ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>
-                {personalDetails.title}
-              </span>
-            </div>
+            {/* Primary Subtitle */}
+            <h2 className={`text-xl sm:text-2xl font-bold mb-3 ${darkMode ? 'text-slate-200' : 'text-slate-800'}`}>
+              Full Stack Developer
+            </h2>
 
-            {/* Short Bio */}
+            {/* Supporting Bio Line */}
             <p className={`text-base sm:text-lg leading-relaxed mb-6 max-w-2xl ${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>
-              {personalDetails.tagline}
+              Building scalable web applications, RESTful APIs & enterprise software.
             </p>
 
-            {/* Hero CTAs */}
-            <div className="flex flex-wrap items-center gap-3.5 w-full sm:w-auto mb-6">
-              {/* View Work */}
+            {/* Hero CTA Buttons */}
+            <div className="flex flex-wrap items-center gap-3 w-full sm:w-auto mb-6">
+              {/* Primary CTA - View Work */}
               <a
                 href="#projects"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 flex items-center justify-center gap-2.5"
+                className="w-full sm:w-auto h-11 sm:h-12 px-6 rounded-xl font-bold text-xs sm:text-sm bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-md shadow-blue-500/20 hover:shadow-blue-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2"
               >
                 <span>View My Work</span>
                 <FaArrowRight className="text-xs" />
@@ -69,7 +67,7 @@ export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
               {/* Download Resume */}
               <button
                 onClick={onDownloadResume}
-                className={`w-full sm:w-auto px-6 py-3.5 rounded-xl font-semibold text-sm border transition-all duration-200 flex items-center justify-center gap-2.5 ${
+                className={`w-full sm:w-auto h-11 sm:h-12 px-5 rounded-xl font-semibold text-xs sm:text-sm border transition-all duration-200 hover:-translate-y-0.5 flex items-center justify-center gap-2 ${
                   darkMode 
                     ? 'bg-slate-800/80 border-slate-700 text-white hover:bg-slate-700 hover:border-slate-600' 
                     : 'bg-white border-slate-300 text-slate-800 hover:bg-slate-50 hover:border-slate-400 shadow-sm'
@@ -82,7 +80,7 @@ export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
               {/* Contact Me */}
               <a
                 href="#contact"
-                className={`w-full sm:w-auto px-6 py-3.5 rounded-xl font-semibold text-sm border transition-all duration-200 flex items-center justify-center gap-2 ${
+                className={`w-full sm:w-auto h-11 sm:h-12 px-5 rounded-xl font-semibold text-xs sm:text-sm border transition-all duration-200 hover:-translate-y-0.5 flex items-center justify-center gap-2 ${
                   darkMode
                     ? 'bg-slate-900/50 border-slate-800 text-slate-300 hover:text-white hover:bg-slate-800'
                     : 'bg-slate-100/80 border-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-200'
@@ -92,25 +90,25 @@ export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
               </a>
             </div>
 
-            {/* Social Channels & Quick Stats */}
-            <div className="w-full pt-4 border-t border-slate-200/40 dark:border-slate-800/60 space-y-4">
-              <div className="flex items-center gap-4">
+            {/* Social Channels & Stat Chips */}
+            <div className="w-full pt-4 border-t border-slate-200/40 dark:border-slate-800/60 space-y-3.5">
+              <div className="flex flex-wrap items-center gap-3">
                 <span className={`text-xs font-semibold uppercase tracking-wider ${darkMode ? 'text-slate-400' : 'text-slate-500'}`}>
                   Connect with me:
                 </span>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-2.5">
                   <a
                     href={personalDetails.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn"
-                    className={`p-2.5 rounded-xl border transition-all duration-200 hover:scale-110 ${
+                    className={`w-9 h-9 rounded-xl border flex items-center justify-center transition-all duration-200 hover:scale-105 ${
                       darkMode 
                         ? 'bg-slate-800/80 border-slate-700 text-blue-400 hover:bg-blue-600 hover:text-white hover:border-blue-500' 
                         : 'bg-slate-100 border-slate-200 text-blue-600 hover:bg-blue-600 hover:text-white hover:border-blue-600'
                     }`}
                   >
-                    <FaLinkedin className="text-lg" />
+                    <FaLinkedin className="text-base" />
                   </a>
 
                   <a
@@ -118,57 +116,57 @@ export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub"
-                    className={`p-2.5 rounded-xl border transition-all duration-200 hover:scale-110 ${
+                    className={`w-9 h-9 rounded-xl border flex items-center justify-center transition-all duration-200 hover:scale-105 ${
                       darkMode 
                         ? 'bg-slate-800/80 border-slate-700 text-slate-200 hover:bg-slate-700 hover:text-white' 
                         : 'bg-slate-100 border-slate-200 text-slate-800 hover:bg-slate-900 hover:text-white'
                     }`}
                   >
-                    <FaGithub className="text-lg" />
+                    <FaGithub className="text-base" />
                   </a>
 
                   <a
                     href={`mailto:${personalDetails.email}`}
                     aria-label="Email"
-                    className={`p-2.5 rounded-xl border transition-all duration-200 hover:scale-110 ${
+                    className={`w-9 h-9 rounded-xl border flex items-center justify-center transition-all duration-200 hover:scale-105 ${
                       darkMode 
                         ? 'bg-slate-800/80 border-slate-700 text-emerald-400 hover:bg-emerald-600 hover:text-white hover:border-emerald-500' 
                         : 'bg-slate-100 border-slate-200 text-emerald-600 hover:bg-emerald-600 hover:text-white hover:border-emerald-600'
                     }`}
                   >
-                    <FaEnvelope className="text-lg" />
+                    <FaEnvelope className="text-base" />
                   </a>
                 </div>
               </div>
 
               {/* Quick Stat Chips Bar */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2">
-                <div className={`p-3 rounded-2xl border flex items-center gap-2.5 ${darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
-                  <FaGraduationCap className="text-blue-500 text-lg shrink-0" />
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+                <div className={`p-2.5 rounded-xl border flex items-center gap-2 ${darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
+                  <FaGraduationCap className="text-blue-500 text-base shrink-0" />
                   <div>
                     <p className={`text-xs font-extrabold ${darkMode ? 'text-white' : 'text-slate-900'}`}>8.0 / 10</p>
                     <p className="text-[10px] text-slate-400 font-semibold">MCA CGPA</p>
                   </div>
                 </div>
 
-                <div className={`p-3 rounded-2xl border flex items-center gap-2.5 ${darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
-                  <FaBriefcase className="text-indigo-400 text-lg shrink-0" />
+                <div className={`p-2.5 rounded-xl border flex items-center gap-2 ${darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
+                  <FaBriefcase className="text-indigo-400 text-base shrink-0" />
                   <div>
                     <p className={`text-xs font-extrabold ${darkMode ? 'text-white' : 'text-slate-900'}`}>2 Internships</p>
                     <p className="text-[10px] text-slate-400 font-semibold">Full Stack</p>
                   </div>
                 </div>
 
-                <div className={`p-3 rounded-2xl border flex items-center gap-2.5 ${darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
-                  <FaFolderOpen className="text-emerald-400 text-lg shrink-0" />
+                <div className={`p-2.5 rounded-xl border flex items-center gap-2 ${darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
+                  <FaFolderOpen className="text-emerald-400 text-base shrink-0" />
                   <div>
                     <p className={`text-xs font-extrabold ${darkMode ? 'text-white' : 'text-slate-900'}`}>4 Projects</p>
                     <p className="text-[10px] text-slate-400 font-semibold">Live & GitHub</p>
                   </div>
                 </div>
 
-                <div className={`p-3 rounded-2xl border flex items-center gap-2.5 ${darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
-                  <FaAward className="text-amber-400 text-lg shrink-0" />
+                <div className={`p-2.5 rounded-xl border flex items-center gap-2 ${darkMode ? 'bg-slate-900/60 border-slate-800' : 'bg-slate-50 border-slate-200'}`}>
+                  <FaAward className="text-amber-400 text-base shrink-0" />
                   <div>
                     <p className={`text-xs font-extrabold ${darkMode ? 'text-white' : 'text-slate-900'}`}>3 Verified</p>
                     <p className="text-[10px] text-slate-400 font-semibold">Certificates</p>
@@ -181,78 +179,78 @@ export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
 
           {/* Right Hero Visual Area */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.96 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
             className="lg:col-span-5 relative"
           >
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+            <div className="relative mx-auto max-w-xs sm:max-w-sm lg:max-w-sm">
               
-              {/* Outer decorative ring */}
-              <div className="absolute -inset-1.5 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl blur-lg opacity-30 group-hover:opacity-100 transition duration-1000 group-hover:duration-200"></div>
+              {/* Subtle outer ring shadow */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl blur-md opacity-15 pointer-events-none"></div>
 
-              {/* Main Visual Card */}
-              <div className={`relative rounded-3xl p-4 overflow-hidden border shadow-2xl ${
+              {/* Main Developer Visual Panel */}
+              <div className={`relative rounded-3xl p-3.5 overflow-hidden border shadow-xl ${
                 darkMode ? 'glass-panel-dark' : 'glass-panel-light'
               }`}>
                 
-                {/* Top Code Header Bar */}
-                <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-200/40 dark:border-slate-700/50 px-2">
+                {/* Top Window Bar */}
+                <div className="flex items-center justify-between pb-2.5 mb-2.5 border-b border-slate-200/40 dark:border-slate-700/50 px-2">
                   <div className="flex items-center gap-1.5">
-                    <span className="w-3 h-3 rounded-full bg-rose-500/80 inline-block"></span>
-                    <span className="w-3 h-3 rounded-full bg-amber-500/80 inline-block"></span>
-                    <span className="w-3 h-3 rounded-full bg-emerald-500/80 inline-block"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block"></span>
+                    <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block"></span>
                   </div>
-                  <span className="text-xs font-mono font-medium text-slate-400 flex items-center gap-1.5">
+                  <span className="text-[11px] font-mono font-medium text-slate-400 flex items-center gap-1.5">
                     <FaLaptopCode className="text-blue-500" /> vivek-developer.js
                   </span>
-                  <span className="w-12"></span>
+                  <span className="w-10"></span>
                 </div>
 
-                {/* Avatar Image Container */}
-                <div className="relative rounded-2xl overflow-hidden mb-4 group aspect-square bg-slate-950">
+                {/* Avatar Image Frame */}
+                <div className="relative rounded-2xl overflow-hidden mb-3 group aspect-[4/5] bg-slate-950">
                   <img 
                     src={personalDetails.avatar} 
                     alt="Vivek Kumar - Full Stack Developer" 
-                    className="w-full h-full object-cover object-[90%_15%] transform group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover object-[85%_15%] transform group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/20 to-transparent"></div>
                   
                   {/* Floating Overlay Badge */}
-                  <div className="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-slate-900/85 backdrop-blur-md border border-slate-700/50 text-white flex items-center justify-between">
-                    <div className="flex items-center gap-2.5">
-                      <div className="w-8 h-8 rounded-lg bg-blue-600/30 flex items-center justify-center text-blue-400">
+                  <div className="absolute bottom-2.5 left-2.5 right-2.5 p-2.5 rounded-xl bg-slate-900/85 backdrop-blur-md border border-slate-700/50 text-white flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-blue-600/30 flex items-center justify-center text-blue-400 text-xs">
                         <FaCode />
                       </div>
                       <div>
-                        <p className="text-xs font-bold">Vivek Kumar</p>
-                        <p className="text-[11px] text-slate-400">MCA • Graphic Era Univ.</p>
+                        <p className="text-xs font-bold leading-tight">Vivek Kumar</p>
+                        <p className="text-[10px] text-slate-400">MCA • Graphic Era Univ.</p>
                       </div>
                     </div>
-                    <span className="text-[11px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-semibold border border-emerald-500/30">
+                    <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">
                       CGPA 8.0 / 10
                     </span>
                   </div>
                 </div>
 
-                {/* Mini Live Code Snippet */}
-                <div className={`p-3.5 rounded-xl font-mono text-xs overflow-x-auto ${
+                {/* Mini Developer Code Snippet */}
+                <div className={`p-3 rounded-xl font-mono text-[11px] leading-relaxed overflow-x-auto ${
                   darkMode ? 'bg-slate-950/90 text-slate-300 border border-slate-800' : 'bg-slate-900 text-slate-200'
                 }`}>
                   <p><span className="text-purple-400">const</span> <span className="text-blue-400">developer</span> = &#123;</p>
-                  <p className="pl-4"><span className="text-indigo-300">name</span>: <span className="text-emerald-300">"Vivek Kumar"</span>,</p>
-                  <p className="pl-4"><span className="text-indigo-300">degree</span>: <span className="text-emerald-300">"MCA Graduate"</span>,</p>
-                  <p className="pl-4"><span className="text-indigo-300">stack</span>: [<span className="text-amber-300">"React"</span>, <span className="text-amber-300">"Node"</span>, <span className="text-amber-300">"Java"</span>, <span className="text-amber-300">"MySQL"</span>],</p>
-                  <p className="pl-4"><span className="text-indigo-300">seeking</span>: <span className="text-emerald-300 font-bold">"Full Stack / Dev Roles"</span></p>
+                  <p className="pl-3"><span className="text-indigo-300">name</span>: <span className="text-emerald-300">"Vivek Kumar"</span>,</p>
+                  <p className="pl-3"><span className="text-indigo-300">role</span>: <span className="text-emerald-300">"Full Stack Developer"</span>,</p>
+                  <p className="pl-3"><span className="text-indigo-300">stack</span>: [<span className="text-amber-300">"React"</span>, <span className="text-amber-300">"Node"</span>, <span className="text-amber-300">"Java"</span>, <span className="text-amber-300">"MySQL"</span>],</p>
+                  <p className="pl-3"><span className="text-indigo-300">status</span>: <span className="text-emerald-300 font-bold">"Open to Opportunities"</span></p>
                   <p>&#125;;</p>
                 </div>
 
               </div>
 
               {/* Floating tech badge pill top right */}
-              <div className="absolute -top-4 -right-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-3 rounded-2xl shadow-xl flex items-center gap-2 hidden sm:flex border border-white/20 animate-bounce" style={{ animationDuration: '4s' }}>
-                <FaWandMagicSparkles className="text-amber-300 text-sm" />
-                <span className="text-xs font-bold">Full Stack Engineer</span>
+              <div className="absolute -top-3 -right-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-3 py-1.5 rounded-xl shadow-lg flex items-center gap-1.5 hidden sm:flex border border-white/20">
+                <FaWandMagicSparkles className="text-amber-300 text-xs" />
+                <span className="text-[11px] font-bold">Full Stack Engineer</span>
               </div>
 
             </div>
