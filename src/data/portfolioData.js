@@ -163,7 +163,7 @@ export const projectsList = [
     id: "gameverse",
     title: "GameVerse: Java Mini-Game System",
     category: "Java / Desktop App",
-    image: "/assets/gameverse.jpg",
+    image: "/project_img/project1.png",
     period: "Jan 2025 - May 2025",
     tagline: "Object-Oriented Desktop Gaming Suite in Java",
     description:
@@ -182,7 +182,7 @@ export const projectsList = [
     id: "college-website",
     title: "College Website Development",
     category: "Full Stack Web",
-    image: "/assets/trishul_crm.jpg",
+    image: "/project_img/project2.png",
     period: "Jan 2024 - May 2024",
     tagline: "Responsive Web Portal for Academic Institutions",
     description:
@@ -201,7 +201,7 @@ export const projectsList = [
     id: "trishul-crm",
     title: "Trishul CRM Portal",
     category: "Full Stack Web",
-    image: "/assets/trishul_crm.jpg",
+    image: "/project_img/project3.png",
     period: "Recent Project",
     tagline: "Lead Management & Customer Relationship Platform",
     description:
