@@ -50,9 +50,12 @@ const getBadgeStyle = (level, darkMode) => {
 export default function Skills({ darkMode }) {
   const [activeTab, setActiveTab] = useState('all');
 
-  const filteredSkills = activeTab === 'all' 
+  const rawSkills = activeTab === 'all' 
     ? skillCategories.flatMap(cat => cat.skills)
     : skillCategories.find(cat => cat.id === activeTab)?.skills || [];
+
+  // Sort: Proficient on top, Intermediate in middle, Working Knowledge at bottom
+  const filteredSkills = [...rawSkills].sort((a, b) => b.percentage - a.percentage);
 
   return (
     <section id="skills" className="py-20 relative overflow-hidden">
