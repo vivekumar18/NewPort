@@ -4,15 +4,12 @@ import { FaSun, FaMoon, FaBars, FaXmark, FaPaperPlane, FaBriefcase, FaCode } fro
 import { personalDetails } from '../data/portfolioData';
 
 const navLinks = [
-  { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
   { name: 'Skills', href: '#skills' },
   { name: 'Projects', href: '#projects' },
   { name: 'Experience', href: '#experience' },
   { name: 'Education', href: '#education' },
   { name: 'Certifications', href: '#certifications' },
-  { name: 'Gallery', href: '#gallery' },
-  { name: 'Resume', href: '#resume' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -73,7 +70,7 @@ export default function Navbar({ darkMode, setDarkMode, onOpenHireMe }) {
         </a>
 
         {/* Desktop Nav Links */}
-        <nav className="hidden xl:flex items-center gap-1.5 bg-slate-900/5 dark:bg-slate-800/40 p-1.5 rounded-full border border-slate-200/50 dark:border-slate-700/50 backdrop-blur-md">
+        <nav className="hidden lg:flex items-center gap-1 bg-slate-900/5 dark:bg-slate-800/40 p-1.5 rounded-full border border-slate-200/50 dark:border-slate-700/50 backdrop-blur-md">
           {navLinks.map((link) => {
             const isActive = activeSection === link.href.substring(1);
             return (
