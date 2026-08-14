@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaFilePdf, FaDownload, FaEye, FaGraduationCap, FaBriefcase, FaCode, 
-  FaEnvelope, FaPhone, FaLocationDot, FaXmark, FaCheck, FaAward 
+  FaEnvelope, FaPhone, FaLocationDot, FaXmark, FaCheck, FaAward, FaArrowUpRightFromSquare 
 } from 'react-icons/fa6';
 import { personalDetails, education, experience, skillCategories } from '../data/portfolioData';
 
@@ -77,7 +77,7 @@ export default function Resume({ darkMode, onDownloadResume }) {
                   className="px-8 py-4 rounded-2xl font-bold text-sm bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-xl shadow-blue-500/25 hover:shadow-blue-500/40 hover:scale-[1.02] active:scale-[0.98] transition flex items-center gap-3"
                 >
                   <FaDownload className="text-base" />
-                  <span>Download Complete Resume</span>
+                  <span>Download Resume PDF</span>
                 </button>
 
                 <button
@@ -165,6 +165,15 @@ export default function Resume({ darkMode, onDownloadResume }) {
                 </div>
 
                 <div className="flex items-center gap-2">
+                  <a
+                    href="/resume/Vivek-Kumar-Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center gap-1.5"
+                  >
+                    <FaArrowUpRightFromSquare className="text-xs text-blue-400" />
+                    <span>Open PDF Tab</span>
+                  </a>
                   <button
                     onClick={onDownloadResume}
                     className="px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white hover:bg-blue-500 flex items-center gap-2 shadow-lg"
@@ -190,7 +199,7 @@ export default function Resume({ darkMode, onDownloadResume }) {
                   <p className="text-xs text-slate-400 mt-2 flex items-center justify-center gap-4 flex-wrap">
                     <span>Noida, Uttar Pradesh, India</span>
                     <span>•</span>
-                    <span>vivekkumar.mca26@gmail.com</span>
+                    <span>vivekkumar120103@gmail.com</span>
                     <span>•</span>
                     <a href={personalDetails.linkedin} target="_blank" rel="noreferrer" className="text-blue-400 hover:underline">LinkedIn</a>
                     <span>•</span>
@@ -204,7 +213,7 @@ export default function Resume({ darkMode, onDownloadResume }) {
                     PROFESSIONAL SUMMARY
                   </h4>
                   <p className="text-xs leading-relaxed text-slate-300">
-                    Motivated MCA graduate with strong technical expertise in full-stack web development, Java, Python, and relational/NoSQL database management. Demonstrated success through software development internships and major full-stack application projects. Passionate about solving complex problems and contributing to enterprise development teams.
+                    Aspiring Full Stack Developer with hands-on experience in building responsive web applications using Java, JavaScript, React.js, Node.js, and MySQL. Skilled in developing RESTful APIs and scalable solutions. Seeking an opportunity to contribute to real-world software engineering projects.
                   </p>
                 </div>
 
@@ -214,8 +223,8 @@ export default function Resume({ darkMode, onDownloadResume }) {
                     EDUCATION
                   </h4>
                   <div className="space-y-3">
-                    {education.map(edu => (
-                      <div key={edu.id} className="text-xs flex justify-between items-start">
+                    {(education || []).map((edu, idx) => (
+                      <div key={edu.id || idx} className="text-xs flex justify-between items-start">
                         <div>
                           <strong className="text-white block">{edu.degree}</strong>
                           <span className="text-slate-400">{edu.institution}</span>
@@ -235,19 +244,27 @@ export default function Resume({ darkMode, onDownloadResume }) {
                     INTERNSHIP EXPERIENCE
                   </h4>
                   <div className="space-y-4">
-                    {experience.map(exp => (
-                      <div key={exp.id} className="text-xs">
-                        <div className="flex justify-between items-start mb-1">
-                          <strong className="text-white text-sm">{exp.role}</strong>
-                          <span className="text-slate-400 text-[11px]">{exp.company} • {exp.duration}</span>
+                    {(experience || []).map((exp, idx) => {
+                      const bullets = Array.isArray(exp.responsibilities)
+                        ? exp.responsibilities
+                        : (Array.isArray(exp.description) ? exp.description : [exp.description].filter(Boolean));
+
+                      return (
+                        <div key={exp.id || idx} className="text-xs">
+                          <div className="flex justify-between items-start mb-1">
+                            <strong className="text-white text-sm">{exp.role}</strong>
+                            <span className="text-slate-400 text-[11px]">{exp.company} • {exp.period || exp.duration}</span>
+                          </div>
+                          {bullets.length > 0 && (
+                            <ul className="list-disc pl-4 space-y-1 text-slate-300">
+                              {bullets.map((r, i) => (
+                                <li key={i}>{r}</li>
+                              ))}
+                            </ul>
+                          )}
                         </div>
-                        <ul className="list-disc pl-4 space-y-1 text-slate-300">
-                          {exp.responsibilities.map((r, idx) => (
-                            <li key={idx}>{r}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
 
@@ -256,11 +273,11 @@ export default function Resume({ darkMode, onDownloadResume }) {
                   <h4 className="text-xs font-extrabold uppercase tracking-wider text-blue-400 mb-2 border-b border-slate-800 pb-1">
                     TECHNICAL SKILLS
                   </h4>
-                  <div className="grid grid-cols-2 gap-2 text-xs">
-                    <p><strong className="text-white">Languages:</strong> Java, Python, JavaScript, C, C++, PHP</p>
-                    <p><strong className="text-white">Web Stacks:</strong> React.js, Node.js, Express.js, HTML5, CSS3, Tailwind CSS</p>
-                    <p><strong className="text-white">Databases:</strong> MySQL, MongoDB, Oracle, SQL, PL/SQL</p>
-                    <p><strong className="text-white">Tools & Cloud:</strong> Git, GitHub, VS Code, AWS, Netlify, REST APIs</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
+                    <p><strong className="text-white">Programming Languages:</strong> Java, Python, JavaScript, C, C++</p>
+                    <p><strong className="text-white">Web & Cloud:</strong> React.js, Node.js, Express.js, HTML5, CSS3, REST APIs, AWS Cloud</p>
+                    <p><strong className="text-white">Databases:</strong> MySQL, MongoDB, Oracle DB</p>
+                    <p><strong className="text-white">Tools & Practices:</strong> Git, GitHub, VS Code, Jira, SolarWinds, Agile SDLC</p>
                   </div>
                 </div>
 
