@@ -233,24 +233,6 @@ export const projectsList = [
       "Relational MySQL backend schema for order storage",
     ],
   },
-  {
-    id: "ai-assistant",
-    title: "AI Voice Personal Assistant",
-    category: "Python / AI",
-    image: "/assets/ai_assistant.jpg",
-    period: "Recent Project",
-    tagline: "Voice-Controlled Desktop Automation Assistant",
-    description:
-      "Python desktop voice assistant capable of processing speech commands to open applications, search Google & Wikipedia, play YouTube videos, and report weather forecasts.",
-    technologies: ["Python", "SpeechRecognition", "Pyttsx3", "PyWhatKit"],
-    github: "https://github.com/vivekumar18",
-    liveDemo: "#",
-    features: [
-      "Voice recognition & text-to-speech feedback",
-      "Desktop application automation & web searches",
-      "YouTube video playback & news integration",
-    ],
-  },
 ];
 
 export const projects = projectsList;
