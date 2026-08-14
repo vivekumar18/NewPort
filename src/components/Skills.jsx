@@ -115,13 +115,13 @@ export default function Skills({ darkMode }) {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: idx * 0.04 }}
-              className={`p-5 rounded-2xl border transition-all duration-300 hover:-translate-y-1 ${
+              className={`p-4 sm:p-5 rounded-2xl border transition-all duration-300 hover:-translate-y-1 ${
                 darkMode 
                   ? 'glass-card-dark hover:border-blue-500/40 hover:shadow-lg hover:shadow-blue-500/10' 
                   : 'glass-card-light hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10'
               }`}
             >
-              <div className="flex items-center justify-between mb-4">
+              <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-slate-900/80 dark:bg-slate-800/90 border border-slate-700/50 flex items-center justify-center text-xl shadow-inner">
                     {techIconMap[skill.icon] || <FaCode className="text-blue-500" />}
@@ -136,19 +136,6 @@ export default function Skills({ darkMode }) {
                 <span className={`text-[11px] font-bold px-2.5 py-1 rounded-lg border ${getBadgeStyle(skill.level, darkMode)}`}>
                   {skill.level}
                 </span>
-              </div>
-
-              {/* Progress Bar Container */}
-              <div className="space-y-1.5">
-                <div className="w-full bg-slate-200/50 dark:bg-slate-800/70 h-2 rounded-full overflow-hidden p-0.5 border border-slate-300/30 dark:border-slate-700/50">
-                  <motion.div
-                    initial={{ width: 0 }}
-                    whileInView={{ width: `${skill.percentage}%` }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, ease: 'easeOut', delay: idx * 0.03 }}
-                    className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"
-                  />
-                </div>
               </div>
             </motion.div>
           ))}
