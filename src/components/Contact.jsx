@@ -163,7 +163,7 @@ export default function Contact({ darkMode }) {
                     <div>
                       <p className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">LinkedIn Profile</p>
                       <p className={`text-xs sm:text-sm font-bold group-hover:text-blue-500 transition ${darkMode ? 'text-white' : 'text-slate-900'}`}>
-                        linkedin.com/in/vivekkumar-mca
+                        linkedin.com/in/vivek-kumar-3579841a7
                       </p>
                     </div>
                   </div>
@@ -171,7 +171,7 @@ export default function Contact({ darkMode }) {
 
                 {/* GitHub */}
                 <a
-                  href={personalDetails.github}
+                  href={personalDetails.socials.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-3.5 rounded-2xl bg-slate-800/20 border border-slate-700/40 hover:border-blue-500/40 transition group"
@@ -183,7 +183,7 @@ export default function Contact({ darkMode }) {
                     <div>
                       <p className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400">GitHub Repositories</p>
                       <p className={`text-xs sm:text-sm font-bold group-hover:text-blue-500 transition ${darkMode ? 'text-white' : 'text-slate-900'}`}>
-                        github.com/vivekkumar-mca
+                        github.com/vivekumar18
                       </p>
                     </div>
                   </div>

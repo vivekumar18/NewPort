@@ -14,7 +14,7 @@ export const personalDetails = {
   resumeUrl: "/resume/Vivek-Kumar-Resume.pdf",
   socials: {
     github: "https://github.com/vivekumar18",
-    linkedin: "https://linkedin.com/in/vivek-kumar-3579841a7",
+    linkedin: "https://www.linkedin.com/in/vivek-kumar-3579841a7",
     email: "mailto:vivekkumar120103@gmail.com",
     phone: "tel:+919576742410",
   },
