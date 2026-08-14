@@ -1,307 +1,299 @@
+// Centralized Portfolio Data for Vivek Kumar - Full Stack Developer
+
 export const personalDetails = {
   name: "Vivek Kumar",
-  title: "MCA Graduate | Full Stack Developer | Software Developer",
-  shortTitle: "Full Stack Software Developer",
-  tagline: "Passionate software developer with a strong foundation in web development, Java, Python, databases, and modern technologies. I enjoy building practical, user-friendly applications and continuously improving my technical skills.",
+  title: "Aspiring Full Stack Developer",
+  tagline: "Building Scalable Web Applications, RESTful APIs & Enterprise Software",
+  bio: "Aspiring Full Stack Developer with hands-on experience in building responsive web applications using Java, JavaScript, React.js, Node.js, and MySQL. Skilled in developing RESTful APIs, clean user interfaces, and scalable solutions. Seeking an opportunity to contribute to real-world software engineering projects.",
   location: "Noida, Uttar Pradesh, India",
-  email: "vivekkumar.mca26@gmail.com",
-  github: "https://github.com/vivekkumar-mca",
-  linkedin: "https://linkedin.com/in/vivekkumar-mca",
-  status: "Open to Full-Time Roles & Opportunities",
+  email: "vivekkumar120103@gmail.com",
+  phone: "+91-9576742410",
+  status: "Available for Full-Stack & Software Developer Roles",
   avatar: "/assets/profile.jpg",
+  avatarFull: "/assets/profile_full.png",
   resumeUrl: "/resume/Vivek-Kumar-Resume.pdf",
+  socials: {
+    github: "https://github.com/vivekumar18",
+    linkedin: "https://linkedin.com/in/vivek-kumar-3579841a7",
+    email: "mailto:vivekkumar120103@gmail.com",
+    phone: "tel:+919576742410",
+  },
 };
+
+export const stats = [
+  { label: "MCA CGPA", value: "8.0 / 10", detail: "Graphic Era University" },
+  { label: "BCA Score", value: "74.65%", detail: "BRABU University" },
+  { label: "Tech Stack", value: "Full Stack", detail: "React, Node, Java, MySQL" },
+  { label: "Location", value: "Noida, UP", detail: "Open to Remote & Onsite" },
+];
 
 export const aboutHighlights = [
   {
-    icon: "FaBrain",
-    title: "Problem Solving",
-    description: "Strong analytical mindset with core knowledge of Data Structures, Algorithms, and Object-Oriented Programming principles."
+    title: "Full Stack Engineering",
+    description: "Building responsive web applications using React.js, HTML5, CSS3, JavaScript, Node.js, and RESTful APIs.",
+    icon: "code",
   },
   {
-    icon: "FaLayerGroup",
-    title: "Full-Stack Development",
-    description: "Hands-on experience building seamless web applications from modern React UIs to scalable Node.js & PHP REST backends."
+    title: "Object-Oriented Java & Python",
+    description: "Proficient in C, C++, Java, Object-Oriented System Design, Data Structures & Algorithms, and Python scripting.",
+    icon: "java",
   },
   {
-    icon: "FaDatabase",
-    title: "Database Management",
-    description: "Proficient in relational (MySQL, Oracle, SQL, PL/SQL) and NoSQL databases (MongoDB) for robust data architecture."
+    title: "Database Architecture",
+    description: "Hands-on experience with MySQL, Oracle DB, and MongoDB for schema design, query optimization, and data storage.",
+    icon: "database",
   },
   {
-    icon: "FaMobileScreen",
-    title: "Responsive UI Design",
-    description: "Crafting pixel-perfect, accessible, fluid interfaces using React.js, Tailwind CSS, HTML5, and Framer Motion."
+    title: "Cloud & Dev Tooling",
+    description: "AWS Cloud certified, proficient with Git, GitHub, VS Code, SolarWinds, Jira, and Agile SDLC methodologies.",
+    icon: "cloud",
   },
-  {
-    icon: "FaPlug",
-    title: "API Integration",
-    description: "Building, documenting, and consuming RESTful APIs to deliver dynamic user experiences."
-  },
-  {
-    icon: "FaPeopleGroup",
-    title: "Team Collaboration",
-    description: "A proactive collaborator using Git/GitHub, agile workflows, and clear technical communication."
-  },
-  {
-    icon: "FaGraduationCap",
-    title: "Continuous Learning",
-    description: "Constantly expanding skills in Cloud technologies (AWS), AI Foundations, and modern software engineering practices."
-  }
-];
-
-export const stats = [
-  { label: "Degree Level", value: "MCA Graduate", detail: "Graphic Era University (7.96 CGPA)" },
-  { label: "Major Projects", value: "4+ Full Projects", detail: "Web, Desktop & AI Applications" },
-  { label: "Internships", value: "2 Internships", detail: "Full Stack & Web Engineering" },
-  { label: "Tech Stack", value: "15+ Core Skills", detail: "React, Node, Java, Python, AWS" }
 ];
 
 export const skillCategories = [
   {
-    id: "languages",
-    name: "Programming Languages",
+    id: "programming",
+    title: "Programming Languages",
     skills: [
-      { name: "Java", level: 88, icon: "FaJava", category: "Core Backend" },
-      { name: "Python", level: 85, icon: "FaPython", category: "Scripting & AI" },
-      { name: "JavaScript", level: 90, icon: "SiJavascript", category: "Web Standard" },
-      { name: "C", level: 80, icon: "SiC", category: "Systems" },
-      { name: "C++", level: 82, icon: "SiCplusplus", category: "OOP & DSA" },
-      { name: "PHP", level: 78, icon: "FaPhp", category: "Web Scripting" }
-    ]
+      { name: "Java", level: "Advanced", percentage: 90, icon: "java" },
+      { name: "JavaScript (ES6+)", level: "Advanced", percentage: 88, icon: "js" },
+      { name: "C / C++", level: "Intermediate", percentage: 82, icon: "cpp" },
+      { name: "Python", level: "Intermediate", percentage: 80, icon: "python" },
+    ],
   },
   {
     id: "web",
-    name: "Web Technologies",
+    title: "Web & Cloud Tech",
     skills: [
-      { name: "React.js", level: 90, icon: "FaReact", category: "Frontend UI" },
-      { name: "Node.js", level: 82, icon: "FaNodeJs", category: "Backend Runtime" },
-      { name: "Express.js", level: 80, icon: "SiExpress", category: "Server Framework" },
-      { name: "HTML5", level: 95, icon: "FaHtml5", category: "Markup" },
-      { name: "CSS3", level: 92, icon: "FaCss3Alt", category: "Styling" },
-      { name: "Tailwind CSS", level: 90, icon: "SiTailwindcss", category: "Utility CSS" }
-    ]
+      { name: "React.js", level: "Advanced", percentage: 88, icon: "react" },
+      { name: "Node.js & Express", level: "Intermediate", percentage: 82, icon: "node" },
+      { name: "REST APIs", level: "Advanced", percentage: 88, icon: "api" },
+      { name: "HTML5 & CSS3", level: "Expert", percentage: 95, icon: "html" },
+      { name: "Tailwind CSS", level: "Advanced", percentage: 90, icon: "tailwind" },
+      { name: "AWS Cloud", level: "Intermediate", percentage: 78, icon: "aws" },
+    ],
   },
   {
-    id: "database",
-    name: "Databases",
+    id: "databases",
+    title: "Databases & Core CS",
     skills: [
-      { name: "MySQL", level: 86, icon: "SiMysql", category: "Relational DB" },
-      { name: "MongoDB", level: 82, icon: "SiMongodb", category: "NoSQL DB" },
-      { name: "Oracle DB", level: 78, icon: "SiOracle", category: "Enterprise DB" },
-      { name: "SQL", level: 88, icon: "FaDatabase", category: "Queries" },
-      { name: "PL/SQL", level: 76, icon: "FaCode", category: "Procedural SQL" }
-    ]
+      { name: "MySQL", level: "Advanced", percentage: 88, icon: "mysql" },
+      { name: "MongoDB", level: "Intermediate", percentage: 80, icon: "mongodb" },
+      { name: "Oracle DB", level: "Intermediate", percentage: 78, icon: "oracle" },
+      { name: "Data Structures & Algorithms", level: "Advanced", percentage: 85, icon: "dsa" },
+      { name: "DBMS & Operating Systems", level: "Advanced", percentage: 88, icon: "cs" },
+    ],
   },
   {
     id: "tools",
-    name: "Tools & Cloud",
+    title: "Tools & Methodologies",
     skills: [
-      { name: "Git", level: 88, icon: "FaGitAlt", category: "Version Control" },
-      { name: "GitHub", level: 90, icon: "FaGithub", category: "Collaboration" },
-      { name: "VS Code", level: 95, icon: "TbBrandVscode", category: "IDE" },
-      { name: "AWS", level: 75, icon: "FaAws", category: "Cloud Platform" },
-      { name: "Netlify", level: 85, icon: "SiNetlify", category: "Deployment" },
-      { name: "REST APIs", level: 88, icon: "FaPlug", category: "Architecture" }
-    ]
-  }
+      { name: "Git & GitHub", level: "Advanced", percentage: 90, icon: "git" },
+      { name: "VS Code", level: "Expert", percentage: 95, icon: "vscode" },
+      { name: "Jira & SolarWinds", level: "Intermediate", percentage: 78, icon: "jira" },
+      { name: "Agile & SDLC Practices", level: "Advanced", percentage: 85, icon: "agile" },
+    ],
+  },
 ];
 
-export const projects = [
-  {
-    id: "gameverse",
-    title: "GameVerse Platform",
-    category: "Java / Desktop",
-    image: "/assets/gameverse.jpg",
-    description: "A Java Swing-based desktop gaming platform combining multiple interactive mini-games into a single unified desktop interface.",
-    features: [
-      "Multiple built-in classic mini-games (Tic-Tac-Toe, Snake, Sudoku)",
-      "Interactive Java Swing desktop graphical user interface",
-      "Centralized game dashboard & player session tracking",
-      "User-friendly desktop navigation and instant game switching",
-      "Real-time score calculation and game interaction feedback"
-    ],
-    technologies: ["Java", "Java Swing", "OOP Principles", "Desktop Development"],
-    github: "https://github.com/vivekkumar-mca/gameverse",
-    demo: "#",
-    featured: true
-  },
-  {
-    id: "trishul-crm",
-    title: "Trishul CRM",
-    category: "Full Stack",
-    image: "/assets/trishul_crm.jpg",
-    description: "A customer relationship management web application engineered to track client interactions, sales pipelines, and business datasets efficiently.",
-    features: [
-      "Comprehensive customer profile management & interaction tracking",
-      "Dynamic sales pipeline metrics & analytics dashboard",
-      "Fast client search, multi-column filtering, and records sorting",
-      "Complete CRUD operations for accounts, leads, and tasks",
-      "Responsive React UI paired with Express & MongoDB backend REST services"
-    ],
-    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
-    github: "https://github.com/vivekkumar-mca/trishul-crm",
-    demo: "#",
-    featured: true
-  },
-  {
-    id: "makhana-ecom",
-    title: "Buy Makhana Online",
-    category: "E-Commerce",
-    image: "/assets/makhana_ecom.jpg",
-    description: "A full-featured e-commerce platform for browsing, filtering, and ordering organic roasted makhana products online.",
-    features: [
-      "Interactive product catalog with rich media cards & pricing",
-      "Product search, category filter, and detailed product modal",
-      "Responsive shopping interface tuned for mobile & desktop buyers",
-      "Email notification triggers for order confirmations",
-      "PHP & MySQL database integration for backend data persistence"
-    ],
-    technologies: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript", "Tailwind CSS"],
-    github: "https://github.com/vivekkumar-mca/buy-makhana-online",
-    demo: "#",
-    featured: true
-  },
-  {
-    id: "ai-assistant",
-    title: "AI-Based Personal Assistant",
-    category: "Python / AI",
-    image: "/assets/ai_assistant.jpg",
-    description: "A Python desktop virtual assistant capable of understanding voice commands and performing automated system tasks.",
-    features: [
-      "Voice recognition engine converting speech to actionable commands",
-      "Natural Text-to-Speech audio response playback",
-      "Desktop application launching & web search automation",
-      "WhatsApp automated message sending via PyWhatKit integration",
-      "Voice-based system controls and live waveform activity UI"
-    ],
-    technologies: ["Python", "SpeechRecognition", "Pyttsx3", "PyWhatKit", "Automation"],
-    github: "https://github.com/vivekkumar-mca/ai-personal-assistant",
-    demo: "#",
-    featured: true
-  }
-];
-
-export const experience = [
+export const experiences = [
   {
     id: "happieloop",
-    role: "Full Stack Development Intern",
-    company: "Happieloop Technology",
-    location: "Noida, India",
-    duration: "Internship Project Duration",
+    role: "Fullstack Development Intern",
+    company: "Happieloop Technologies",
+    location: "Remote",
+    period: "March 2026",
     type: "Internship",
-    description: "Collaborated in designing and building full-stack web applications, strengthening end-to-end web engineering workflows.",
-    responsibilities: [
-      "Designed and implemented clean, responsive user interfaces using React.js and modern CSS practices.",
-      "Integrated frontend components with Node.js RESTful APIs for dynamic asynchronous data fetching.",
-      "Optimized database schema queries and structured collections for performance.",
-      "Participated in active code reviews, bug fixes, and Git feature branching."
+    description: [
+      "Developed and maintained responsive web applications using HTML, CSS, JavaScript, and backend technologies, ensuring cross-browser compatibility and optimized performance.",
+      "Designed and implemented RESTful APIs and integrated frontend with backend services, enabling efficient data flow and seamless user experience.",
+      "Worked with MySQL databases for efficient data storage, retrieval, and query optimization.",
     ],
-    outcomes: "Enhanced full-stack software development competencies, production API consumption, and team code delivery.",
-    skills: ["React.js", "Node.js", "Express.js", "REST APIs", "Git", "Tailwind CSS"]
+    technologies: ["HTML5", "CSS3", "JavaScript", "REST APIs", "MySQL", "Node.js"],
   },
   {
     id: "oasis",
     role: "Web Development Intern",
     company: "Oasis Infobyte",
-    location: "Remote / Noida, India",
-    duration: "Internship Project Duration",
+    location: "Remote",
+    period: "Previous Internship",
     type: "Internship",
-    description: "Focused on frontend web engineering, crafting interactive, accessible client interfaces.",
-    responsibilities: [
-      "Created structured HTML5 pages and custom styled CSS3 layouts following visual mockups.",
-      "Developed interactive JavaScript logic for forms, DOM manipulation, and visual animations.",
-      "Ensured seamless cross-browser compatibility and fluid mobile-first responsiveness.",
-      "Fixed layout bottlenecks and improved page load performance."
+    description: [
+      "Built interactive web applications and responsive landing pages using modern frontend framework principles.",
+      "Collaborated on API endpoints, state management, and code refactoring to improve overall load times and performance.",
     ],
-    outcomes: "Mastered fundamental web standards, responsive UI layouts, and core JavaScript techniques.",
-    skills: ["HTML5", "CSS3", "JavaScript", "Responsive Design", "UI/UX Best Practices"]
-  }
+    technologies: ["React.js", "JavaScript", "HTML5", "CSS3", "Git"],
+  },
 ];
 
-export const education = [
+export const educationList = [
   {
     id: "mca",
     degree: "Master of Computer Applications (MCA)",
-    institution: "Graphic Era (Deemed to be University), Dehradun",
+    institution: "Graphic Era (Deemed to be) University",
+    location: "Dehradun, Uttarakhand",
     period: "2024 – 2026",
-    grade: "CGPA: 7.96 / 10",
-    badge: "Post Graduation",
-    highlights: [
-      "Advanced coursework in Software Engineering, Cloud Computing, System Architecture, and Database Systems.",
-      "Hands-on project work in Web Technologies, Enterprise Java, and Python AI applications."
-    ]
+    grade: "CGPA: 8.0 / 10",
+    details: "Specialized in Full Stack Engineering, Advanced Database Systems, Software Architecture, and Cloud Technologies.",
   },
   {
     id: "bca",
     degree: "Bachelor of Computer Applications (BCA)",
-    institution: "Munshi Singh College, Motihari",
+    institution: "Babasaheb Bhimrao Ambedkar Bihar University",
+    location: "Muzaffarpur, Bihar",
     period: "2020 – 2023",
     grade: "Percentage: 74.65%",
-    badge: "Graduation",
-    highlights: [
-      "Core foundation in Computer Fundamentals, C/C++, Java, DBMS, Mathematics, and Data Structures.",
-      "Developed foundational academic software projects and web applications."
-    ]
+    details: "Core focus on C/C++, Java Programming, Data Structures, Operating Systems, Computer Networks, and Database Management.",
   },
   {
     id: "senior-secondary",
-    degree: "Senior Secondary (12th / Intermediate)",
-    institution: "M.S.S.G. College, Areraj",
+    degree: "Senior Secondary (Intermediate - 12th)",
+    institution: "Mahant Sheo Shankar Giri College",
+    location: "Areraj, Bihar",
     period: "2018 – 2020",
     grade: "Percentage: 80.4%",
-    badge: "Higher Secondary",
-    highlights: [
-      "Completed Senior Secondary education with focus on Science and Mathematics.",
-      "Maintained strong academic performance."
-    ]
-  }
+    details: "Science Stream with focus on Mathematics, Physics, and Computer Fundamentals.",
+  },
 ];
+
+export const projectsList = [
+  {
+    id: "gameverse",
+    title: "GameVerse: Java Mini-Game System",
+    category: "Java / Desktop App",
+    image: "/assets/gameverse.jpg",
+    period: "Jan 2025 - May 2025",
+    tagline: "Object-Oriented Desktop Gaming Suite in Java",
+    description:
+      "Developed Number Guessing Games, Word Jumble Game, and Color Coding Game in Java, implementing game logic, intuitive UI, and event handling. Integrated multiple games into a single maintainable system applying Object-Oriented Design (OOD), Agile, and SDLC practices.",
+    technologies: ["Java", "DSA", "Object-Oriented Design", "Agile", "SDLC"],
+    github: "https://github.com/vivekumar18",
+    liveDemo: "#",
+    features: [
+      "Number Guessing, Word Jumble, and Color Coding Games",
+      "Unified desktop menu interface with event handling",
+      "Applied Object-Oriented Programming (OOP) principles",
+      "Optimized data structures for score tracking and state management",
+    ],
+  },
+  {
+    id: "college-website",
+    title: "College Website Development",
+    category: "Full Stack Web",
+    image: "/assets/trishul_crm.jpg",
+    period: "Jan 2024 - May 2024",
+    tagline: "Responsive Web Portal for Academic Institutions",
+    description:
+      "Designed and developed a responsive college website with comprehensive modules for About Us, Courses, Faculty Directory, Photo Gallery, Student Results, and Contact Portal using HTML, CSS, JavaScript, PHP, and MySQL.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "VS Code"],
+    github: "https://github.com/vivekumar18",
+    liveDemo: "#",
+    features: [
+      "Dynamic Courses, Faculty Directory, and Gallery sections",
+      "Student result lookup and contact form backend integration",
+      "MySQL database for structured content management",
+      "Built following Agile methodologies and SDLC standards",
+    ],
+  },
+  {
+    id: "trishul-crm",
+    title: "Trishul CRM Portal",
+    category: "Full Stack Web",
+    image: "/assets/trishul_crm.jpg",
+    period: "Recent Project",
+    tagline: "Lead Management & Customer Relationship Platform",
+    description:
+      "Full-stack CRM web application designed to manage client interactions, sales pipelines, and task schedules with role-based dashboard authentication and MongoDB database.",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+    github: "https://github.com/vivekumar18",
+    liveDemo: "#",
+    features: [
+      "Role-based authentication & dashboard analytics",
+      "Client pipeline tracking & scheduled task notifications",
+      "RESTful API backend powered by Express & MongoDB",
+    ],
+  },
+  {
+    id: "buy-makhana",
+    title: "Buy Makhana Online E-Commerce",
+    category: "Full Stack Web",
+    image: "/assets/makhana_ecom.jpg",
+    period: "Recent Project",
+    tagline: "Specialized Superfood E-Commerce Marketplace",
+    description:
+      "E-commerce Web application featuring product catalog filters, dynamic shopping cart management, user accounts, and checkout workflows built with PHP, MySQL, and Tailwind CSS.",
+    technologies: ["PHP", "MySQL", "HTML5", "CSS3", "Tailwind CSS"],
+    github: "https://github.com/vivekumar18",
+    liveDemo: "#",
+    features: [
+      "Interactive product catalog with category filter",
+      "Dynamic cart state management & checkout simulation",
+      "Relational MySQL backend schema for order storage",
+    ],
+  },
+  {
+    id: "ai-assistant",
+    title: "AI Voice Personal Assistant",
+    category: "Python / AI",
+    image: "/assets/ai_assistant.jpg",
+    period: "Recent Project",
+    tagline: "Voice-Controlled Desktop Automation Assistant",
+    description:
+      "Python desktop voice assistant capable of processing speech commands to open applications, search Google & Wikipedia, play YouTube videos, and report weather forecasts.",
+    technologies: ["Python", "SpeechRecognition", "Pyttsx3", "PyWhatKit"],
+    github: "https://github.com/vivekumar18",
+    liveDemo: "#",
+    features: [
+      "Voice recognition & text-to-speech feedback",
+      "Desktop application automation & web searches",
+      "YouTube video playback & news integration",
+    ],
+  },
+];
+
+export const projects = projectsList;
+
 
 export const certifications = [
   {
-    id: "aws-ai",
-    title: "AWS Artificial Intelligence Practitioner Learning Plan",
-    issuer: "Amazon Web Services (AWS)",
-    year: "2024",
-    badge: "AWS Certified Path",
-    description: "Comprehensive training on AWS AI services, Machine Learning basics, SageMaker fundamentals, and cloud AI architecture.",
-    verifyUrl: "https://aws.amazon.com/training/"
+    id: "fullstack-apna",
+    title: "Full Stack Web Development",
+    issuer: "Apna College",
+    date: "March 2025",
+    credentialId: "APNA-FSWD-2025",
+    icon: "code",
+    link: "https://github.com/vivekumar18",
+    skills: ["HTML5", "CSS3", "JavaScript", "React.js", "Node.js", "MySQL", "REST APIs"],
   },
   {
-    id: "aws-genai",
-    title: "AWS Generative AI Learning Courses",
-    issuer: "Amazon Web Services (AWS)",
-    year: "2024",
-    badge: "AI Specialty",
-    description: "Specialized coursework covering foundation models, Prompt Engineering, AWS Bedrock, and generative AI application design.",
-    verifyUrl: "https://aws.amazon.com/generative-ai/"
+    id: "isp-internshala",
+    title: "Internshala Student Partner (ISP)",
+    issuer: "Internshala",
+    date: "July 2025",
+    credentialId: "ISP-2025-VK",
+    icon: "award",
+    link: "https://github.com/vivekumar18",
+    skills: ["Leadership", "Technical Communication", "Community Building"],
   },
   {
-    id: "aws-foundations",
-    title: "AWS Foundations Accreditation",
-    issuer: "Amazon Web Services (AWS)",
-    year: "2024",
-    badge: "Cloud Foundation",
-    description: "Core cloud concepts, AWS Global Infrastructure, IAM security, EC2 computing, S3 storage, and cloud economics.",
-    verifyUrl: "https://aws.amazon.com/training/"
+    id: "aws-cloud",
+    title: "AWS Cloud Fundamentals",
+    issuer: "Amazon Web Services",
+    date: "Oct 2025",
+    credentialId: "AWS-CLOUD-2025",
+    icon: "aws",
+    link: "https://github.com/vivekumar18",
+    skills: ["EC2", "S3", "Cloud Concepts", "IAM", "VPC"],
   },
-  {
-    id: "aws-well-architected",
-    title: "AWS Well-Architected Foundations",
-    issuer: "Amazon Web Services (AWS)",
-    year: "2024",
-    badge: "Architecture",
-    description: "Best practices across Operational Excellence, Security, Reliability, Performance Efficiency, and Cost Optimization on AWS.",
-    verifyUrl: "https://aws.amazon.com/architecture/well-architected/"
-  },
-  {
-    id: "hackerrank-js",
-    title: "HackerRank JavaScript Skill Certification",
-    issuer: "HackerRank",
-    year: "2023",
-    badge: "Verified Skill",
-    description: "Verified skill assessment covering asynchronous JavaScript, ES6+ scope, functions, objects, and DOM manipulation.",
-    verifyUrl: "https://www.hackerrank.com/certificates"
-  }
 ];
+
+export const experience = experiences;
+export const education = educationList;
+
+export const achievements = [
+  {
+    title: "DSA Problem Solving",
+    description: "Solved Data Structures and Algorithms problems on platforms including LeetCode and GeeksforGeeks, demonstrating strong analytical and problem-solving abilities.",
+  },
+];
+
