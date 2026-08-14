@@ -12,6 +12,8 @@ export const personalDetails = {
   avatar: "/assets/profile.jpg",
   avatarFull: "/assets/profile_full.png",
   resumeUrl: "/resume/Vivek-Kumar-Resume.pdf",
+  github: "https://github.com/vivekumar18",
+  linkedin: "https://www.linkedin.com/in/vivek-kumar-3579841a7",
   socials: {
     github: "https://github.com/vivekumar18",
     linkedin: "https://www.linkedin.com/in/vivek-kumar-3579841a7",
