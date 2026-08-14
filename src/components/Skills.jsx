@@ -140,10 +140,6 @@ export default function Skills({ darkMode }) {
 
               {/* Progress Bar Container */}
               <div className="space-y-1.5">
-                <div className="flex items-center justify-between text-[11px] font-semibold text-slate-400">
-                  <span>Proficiency</span>
-                  <span className="font-mono text-blue-400 font-bold">{skill.percentage}%</span>
-                </div>
                 <div className="w-full bg-slate-200/50 dark:bg-slate-800/70 h-2 rounded-full overflow-hidden p-0.5 border border-slate-300/30 dark:border-slate-700/50">
                   <motion.div
                     initial={{ width: 0 }}
