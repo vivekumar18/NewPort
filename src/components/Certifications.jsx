@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaAward, FaAws, FaSquareCheck, FaArrowUpRightFromSquare, FaXmark, FaCertificate, FaShieldHalved } from 'react-icons/fa6';
+import { FaAward, FaAws, FaSquareCheck, FaArrowUpRightFromSquare, FaXmark, FaCertificate, FaShieldHalved, FaCode } from 'react-icons/fa6';
 import { SiHackerrank } from 'react-icons/si';
 import { certifications } from '../data/portfolioData';
 
@@ -21,17 +21,19 @@ export default function Certifications({ darkMode }) {
             Professional <span className="text-blue-500">Certifications</span>
           </h2>
           <p className={`text-base ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-            Industry certifications validated in Cloud Architecture, Artificial Intelligence, Generative AI, and JavaScript engineering.
+            Industry certifications validated in Full Stack Web Development, Cloud Computing, and Leadership.
           </p>
         </div>
 
         {/* Certifications Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {certifications.map((cert, idx) => {
+          {(certifications || []).map((cert, idx) => {
             const isAws = cert.issuer.includes('AWS') || cert.issuer.includes('Amazon');
+            const targetUrl = cert.link || cert.verifyUrl || '#';
+
             return (
               <motion.div
-                key={cert.id}
+                key={cert.id || idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -47,21 +49,21 @@ export default function Certifications({ darkMode }) {
                     <div className={`w-12 h-12 rounded-2xl flex items-center justify-center text-2xl shadow-inner ${
                       isAws 
                         ? 'bg-amber-500/10 text-amber-500 border border-amber-500/20' 
-                        : 'bg-emerald-500/10 text-emerald-500 border border-emerald-500/20'
+                        : 'bg-blue-500/10 text-blue-500 border border-blue-500/20'
                     }`}>
-                      {isAws ? <FaAws /> : <SiHackerrank />}
+                      {isAws ? <FaAws /> : <FaCode />}
                     </div>
 
                     <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-500 border border-blue-500/20">
-                      {cert.year}
+                      {cert.date || cert.year}
                     </span>
                   </div>
 
                   <span className="text-[10px] font-extrabold uppercase tracking-wider text-slate-400 block mb-1">
-                    {cert.badge}
+                    {cert.badge || "Verified Certificate"}
                   </span>
 
-                  <h3 className={`text-base font-bold mb-2 ${darkMode ? 'text-white' : 'text-slate-900'}`}>
+                  <h3 className={`text-base font-bold mb-1 ${darkMode ? 'text-white' : 'text-slate-900'}`}>
                     {cert.title}
                   </h3>
 
@@ -69,17 +71,44 @@ export default function Certifications({ darkMode }) {
                     {cert.issuer}
                   </p>
 
-                  <p className={`text-xs leading-relaxed mb-6 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
-                    {cert.description}
-                  </p>
+                  {cert.description && (
+                    <p className={`text-xs leading-relaxed mb-4 ${darkMode ? 'text-slate-400' : 'text-slate-600'}`}>
+                      {cert.description}
+                    </p>
+                  )}
+
+                  {/* Skills tags */}
+                  {cert.skills && (
+                    <div className="flex flex-wrap gap-1.5 mb-6">
+                      {cert.skills.map((skill) => (
+                        <span
+                          key={skill}
+                          className="px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800/40 border border-slate-700/50 text-slate-300"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
 
-                <div className="pt-4 border-t border-slate-200/50 dark:border-slate-800">
+                <div className="pt-4 border-t border-slate-200/50 dark:border-slate-800 flex items-center gap-2">
+                  <a
+                    href={targetUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 py-2.5 rounded-xl font-bold text-xs bg-blue-600 hover:bg-blue-500 text-white transition flex items-center justify-center gap-2 shadow-lg shadow-blue-500/20"
+                  >
+                    <FaArrowUpRightFromSquare className="text-xs" />
+                    <span>Verify Credential</span>
+                  </a>
+
                   <button
                     onClick={() => setActiveCert(cert)}
-                    className="w-full py-2.5 rounded-xl font-bold text-xs bg-slate-800/10 dark:bg-slate-800 text-blue-500 dark:text-blue-400 hover:bg-blue-600 hover:text-white transition flex items-center justify-center gap-2 border border-slate-300 dark:border-slate-700"
+                    className="p-2.5 rounded-xl font-bold text-xs bg-slate-800/20 text-slate-400 hover:text-white hover:bg-slate-800 transition border border-slate-700/50"
+                    title="View Details"
                   >
-                    <FaCertificate /> View Certificate Details
+                    <FaCertificate className="text-sm text-blue-400" />
                   </button>
                 </div>
 
@@ -131,12 +160,14 @@ export default function Certifications({ darkMode }) {
               <div className="space-y-4">
                 <div className="p-4 rounded-2xl bg-slate-800/40 border border-slate-800">
                   <h4 className="text-base font-extrabold text-white mb-1">{activeCert.title}</h4>
-                  <p className="text-xs text-slate-400">Issued Year: {activeCert.year} • {activeCert.badge}</p>
+                  <p className="text-xs text-slate-400">Issued Date: {activeCert.date || activeCert.year}</p>
                 </div>
 
-                <p className="text-xs leading-relaxed text-slate-300">
-                  {activeCert.description}
-                </p>
+                {activeCert.description && (
+                  <p className="text-xs leading-relaxed text-slate-300">
+                    {activeCert.description}
+                  </p>
+                )}
 
                 <div className="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs flex items-center gap-2">
                   <FaSquareCheck className="text-sm shrink-0" />
@@ -146,13 +177,13 @@ export default function Certifications({ darkMode }) {
 
               <div className="mt-6 pt-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between gap-3">
                 <a
-                  href={activeCert.verifyUrl}
+                  href={activeCert.link || activeCert.verifyUrl || '#'}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-5 py-2.5 rounded-xl font-bold text-xs bg-blue-600 hover:bg-blue-500 text-white transition flex items-center gap-2 shadow-lg shadow-blue-500/25"
                 >
                   <FaArrowUpRightFromSquare className="text-xs" />
-                  <span>Verify Issuer Portal</span>
+                  <span>Open Official Post / Verification</span>
                 </a>
 
                 <button
