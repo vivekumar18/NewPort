@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Education from './components/Education';
 import Certifications from './components/Certifications';
+import Gallery from './components/Gallery';
 import Resume from './components/Resume';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -70,6 +71,8 @@ export default function App() {
         <Education darkMode={darkMode} />
 
         <Certifications darkMode={darkMode} />
+
+        <Gallery darkMode={darkMode} />
 
         <Resume
           darkMode={darkMode}

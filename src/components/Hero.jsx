@@ -193,7 +193,7 @@ export default function Hero({ darkMode, onOpenHireMe, onDownloadResume }) {
                       </div>
                     </div>
                     <span className="text-[11px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 font-semibold border border-emerald-500/30">
-                      CGPA 7.96
+                      CGPA 8.0 / 10
                     </span>
                   </div>
                 </div>

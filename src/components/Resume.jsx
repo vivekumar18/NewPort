@@ -49,7 +49,7 @@ export default function Resume({ darkMode, onDownloadResume }) {
                   <FaGraduationCap className="text-blue-400 text-base shrink-0" />
                   <div>
                     <strong className="block text-white">MCA Graduate</strong>
-                    <span className="text-[11px] text-slate-400">7.96 CGPA</span>
+                    <span className="text-[11px] text-slate-400">8.0 / 10 CGPA</span>
                   </div>
                 </div>
 

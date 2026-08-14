@@ -97,7 +97,7 @@ export default function About({ darkMode }) {
               </div>
 
               <p className={`text-sm leading-relaxed mb-4 ${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>
-                I hold a <strong className={darkMode ? 'text-white' : 'text-slate-900'}>Master of Computer Applications (MCA)</strong> degree from Graphic Era (Deemed to be University), Dehradun, graduating with a high academic score of <strong className="text-blue-500">7.96 CGPA</strong>.
+                I hold a <strong className={darkMode ? 'text-white' : 'text-slate-900'}>Master of Computer Applications (MCA)</strong> degree from Graphic Era (Deemed to be University), Dehradun, graduating with a high academic score of <strong className="text-blue-500">8.0 / 10 CGPA</strong>.
               </p>
 
               <p className={`text-sm leading-relaxed mb-6 ${darkMode ? 'text-slate-300' : 'text-slate-600'}`}>
@@ -187,7 +187,7 @@ export default function About({ darkMode }) {
 
               <div className="space-y-4 text-sm leading-relaxed text-slate-300 dark:text-slate-300">
                 <p>
-                  <strong>Vivek Kumar</strong> is a dedicated software developer based in Noida, Uttar Pradesh. Having completed his Master of Computer Applications (MCA) at Graphic Era University with a 7.96 CGPA, Vivek brings a solid foundation in computer science theory and modern software engineering practices.
+                  <strong>Vivek Kumar</strong> is a dedicated software developer based in Noida, Uttar Pradesh. Having completed his Master of Computer Applications (MCA) at Graphic Era University with a 8.0 / 10 CGPA, Vivek brings a solid foundation in computer science theory and modern software engineering practices.
                 </p>
                 <p>
                   His technical skill set spans full-stack web development (React.js, Node.js, Express.js, PHP, HTML5/CSS3, Tailwind CSS), object-oriented desktop programming (Java, Java Swing), scripting & automation (Python), relational database modeling (MySQL, Oracle, SQL/PL-SQL), and NoSQL architectures (MongoDB).
