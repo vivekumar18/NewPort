@@ -5,8 +5,8 @@ import { experience } from '../data/portfolioData';
 
 export default function Experience({ darkMode }) {
   return (
-    <section id="experience" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="py-20 relative overflow-hidden">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">

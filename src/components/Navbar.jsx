@@ -156,7 +156,7 @@ export default function Navbar({ darkMode, setDarkMode, onOpenHireMe }) {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className={`xl:hidden border-b ${
+            className={`lg:hidden border-b ${
               darkMode ? 'bg-slate-950/95 border-slate-800 text-white' : 'bg-white/95 border-slate-200 text-slate-900'
             } backdrop-blur-xl`}
           >

@@ -46,8 +46,8 @@ export default function Skills({ darkMode }) {
     : skillCategories.find(cat => cat.id === activeTab)?.skills || [];
 
   return (
-    <section id="skills" className="py-20 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-20 relative overflow-hidden">
+      <div className="max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-14">
