@@ -71,7 +71,6 @@ export const skillCategories = [
       { name: "Node.js & Express", level: "Intermediate", percentage: 82, icon: "node" },
       { name: "REST APIs", level: "Advanced", percentage: 88, icon: "api" },
       { name: "HTML5 & CSS3", level: "Expert", percentage: 95, icon: "html" },
-      { name: "Tailwind CSS", level: "Advanced", percentage: 90, icon: "tailwind" },
       { name: "AWS Cloud", level: "Intermediate", percentage: 78, icon: "aws" },
     ],
   },
