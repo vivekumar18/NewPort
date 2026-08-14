@@ -137,7 +137,7 @@ export default function Resume({ darkMode, onDownloadResume }) {
       {/* Online Resume Preview Modal */}
       <AnimatePresence>
         {showPreview && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6">
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -150,39 +150,48 @@ export default function Resume({ darkMode, onDownloadResume }) {
               initial={{ opacity: 0, scale: 0.95, y: 15 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 15 }}
-              className="relative w-full max-w-4xl rounded-3xl bg-slate-900 border border-slate-800 text-white p-6 sm:p-10 shadow-2xl z-10 max-h-[90vh] overflow-y-auto"
+              className="relative w-full max-w-4xl rounded-3xl bg-slate-900 border border-slate-800 text-white p-4 sm:p-8 shadow-2xl z-10 max-h-[90vh] overflow-y-auto"
             >
               {/* Header */}
-              <div className="flex items-center justify-between pb-6 mb-6 border-b border-slate-800">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-2xl bg-red-500/10 text-red-500 flex items-center justify-center text-2xl">
-                    <FaFilePdf />
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 mb-6 border-b border-slate-800">
+                <div className="flex items-center justify-between sm:justify-start w-full sm:w-auto gap-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-red-500/10 text-red-500 flex items-center justify-center text-xl sm:text-2xl shrink-0">
+                      <FaFilePdf />
+                    </div>
+                    <div>
+                      <h3 className="text-lg sm:text-2xl font-bold">Resume Preview</h3>
+                      <p className="text-[11px] sm:text-xs text-blue-400 font-medium">Vivek Kumar • MCA Software Developer</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-bold">Resume Preview</h3>
-                    <p className="text-xs text-blue-400 font-medium">Vivek Kumar • MCA Software Developer</p>
-                  </div>
+
+                  <button
+                    onClick={() => setShowPreview(false)}
+                    className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition sm:hidden"
+                  >
+                    <FaXmark className="text-lg" />
+                  </button>
                 </div>
 
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 w-full sm:w-auto">
                   <a
                     href="/resume/Vivek-Kumar-Resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-3.5 py-2 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center gap-1.5"
+                    className="flex-1 sm:flex-initial px-3.5 py-2.5 rounded-xl text-xs font-bold bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 flex items-center justify-center gap-1.5"
                   >
                     <FaArrowUpRightFromSquare className="text-xs text-blue-400" />
-                    <span>Open PDF Tab</span>
+                    <span>Open PDF</span>
                   </a>
                   <button
                     onClick={onDownloadResume}
-                    className="px-4 py-2 rounded-xl text-xs font-bold bg-blue-600 text-white hover:bg-blue-500 flex items-center gap-2 shadow-lg"
+                    className="flex-1 sm:flex-initial px-4 py-2.5 rounded-xl text-xs font-bold bg-blue-600 text-white hover:bg-blue-500 flex items-center justify-center gap-2 shadow-lg"
                   >
                     <FaDownload /> Download
                   </button>
                   <button
                     onClick={() => setShowPreview(false)}
-                    className="p-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition"
+                    className="p-2 rounded-xl text-slate-400 hover:text-white hover:bg-slate-800 transition hidden sm:block"
                   >
                     <FaXmark className="text-xl" />
                   </button>
@@ -190,26 +199,27 @@ export default function Resume({ darkMode, onDownloadResume }) {
               </div>
 
               {/* Printable Style Resume View */}
-              <div className="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-6 text-slate-200">
+              <div className="bg-slate-950 p-4 sm:p-8 rounded-2xl border border-slate-800 space-y-6 text-slate-200">
                 
                 {/* Header Info */}
                 <div className="text-center pb-6 border-b border-slate-800">
-                  <h1 className="text-3xl font-extrabold text-white tracking-tight">VIVEK KUMAR</h1>
-                  <p className="text-sm font-bold text-blue-400 mt-1">MCA GRADUATE | FULL STACK DEVELOPER</p>
-                  <p className="text-xs text-slate-400 mt-2 flex items-center justify-center gap-4 flex-wrap">
+                  <h1 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">VIVEK KUMAR</h1>
+                  <p className="text-xs sm:text-sm font-bold text-blue-400 mt-1">MCA GRADUATE | FULL STACK DEVELOPER</p>
+                  
+                  <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 text-[11px] sm:text-xs text-slate-400 mt-3">
                     <span>Noida, Uttar Pradesh, India</span>
-                    <span>•</span>
-                    <span>vivekkumar120103@gmail.com</span>
-                    <span>•</span>
+                    <span className="hidden sm:inline">•</span>
+                    <a href={`mailto:${personalDetails.email}`} className="hover:text-blue-400 transition">{personalDetails.email}</a>
+                    <span className="hidden sm:inline">•</span>
                     <a href={personalDetails.linkedin} target="_blank" rel="noreferrer" className="text-blue-400 hover:underline">LinkedIn</a>
-                    <span>•</span>
+                    <span className="hidden sm:inline">•</span>
                     <a href={personalDetails.github} target="_blank" rel="noreferrer" className="text-blue-400 hover:underline">GitHub</a>
-                  </p>
+                  </div>
                 </div>
 
                 {/* Objective */}
                 <div>
-                  <h4 className="text-xs font-extrabold uppercase tracking-wider text-blue-400 mb-2 border-b border-slate-800 pb-1">
+                  <h4 className="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-blue-400 mb-2 border-b border-slate-800 pb-1">
                     PROFESSIONAL SUMMARY
                   </h4>
                   <p className="text-xs leading-relaxed text-slate-300">
@@ -219,19 +229,19 @@ export default function Resume({ darkMode, onDownloadResume }) {
 
                 {/* Education */}
                 <div>
-                  <h4 className="text-xs font-extrabold uppercase tracking-wider text-blue-400 mb-3 border-b border-slate-800 pb-1">
+                  <h4 className="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-blue-400 mb-3 border-b border-slate-800 pb-1">
                     EDUCATION
                   </h4>
-                  <div className="space-y-3">
+                  <div className="space-y-4">
                     {(education || []).map((edu, idx) => (
-                      <div key={edu.id || idx} className="text-xs flex justify-between items-start">
+                      <div key={edu.id || idx} className="text-xs flex flex-col sm:flex-row sm:items-start justify-between gap-1 pb-3 border-b border-slate-900/80 last:border-0 last:pb-0">
                         <div>
-                          <strong className="text-white block">{edu.degree}</strong>
-                          <span className="text-slate-400">{edu.institution}</span>
+                          <strong className="text-white block text-xs sm:text-sm font-extrabold">{edu.degree}</strong>
+                          <span className="text-slate-400 text-[11px] sm:text-xs">{edu.institution}</span>
                         </div>
-                        <div className="text-right">
-                          <span className="font-bold text-emerald-400 block">{edu.grade}</span>
-                          <span className="text-slate-400 text-[11px]">{edu.period}</span>
+                        <div className="flex sm:flex-col items-center sm:items-end justify-between gap-2 shrink-0 mt-1 sm:mt-0">
+                          <span className="font-bold text-emerald-400 text-xs whitespace-nowrap bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">{edu.grade}</span>
+                          <span className="text-slate-400 text-[10px] sm:text-[11px] whitespace-nowrap">{edu.period}</span>
                         </div>
                       </div>
                     ))}
@@ -240,7 +250,7 @@ export default function Resume({ darkMode, onDownloadResume }) {
 
                 {/* Experience */}
                 <div>
-                  <h4 className="text-xs font-extrabold uppercase tracking-wider text-blue-400 mb-3 border-b border-slate-800 pb-1">
+                  <h4 className="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-blue-400 mb-3 border-b border-slate-800 pb-1">
                     INTERNSHIP EXPERIENCE
                   </h4>
                   <div className="space-y-4">
@@ -250,13 +260,13 @@ export default function Resume({ darkMode, onDownloadResume }) {
                         : (Array.isArray(exp.description) ? exp.description : [exp.description].filter(Boolean));
 
                       return (
-                        <div key={exp.id || idx} className="text-xs">
-                          <div className="flex justify-between items-start mb-1">
-                            <strong className="text-white text-sm">{exp.role}</strong>
-                            <span className="text-slate-400 text-[11px]">{exp.company} • {exp.period || exp.duration}</span>
+                        <div key={exp.id || idx} className="text-xs pb-3 border-b border-slate-900/80 last:border-0 last:pb-0">
+                          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1.5">
+                            <strong className="text-white text-xs sm:text-sm font-extrabold">{exp.role}</strong>
+                            <span className="text-slate-400 text-[11px] font-medium">{exp.company} • {exp.period || exp.duration}</span>
                           </div>
                           {bullets.length > 0 && (
-                            <ul className="list-disc pl-4 space-y-1 text-slate-300">
+                            <ul className="list-disc pl-4 space-y-1 text-slate-300 text-[11px] sm:text-xs leading-relaxed">
                               {bullets.map((r, i) => (
                                 <li key={i}>{r}</li>
                               ))}
@@ -270,7 +280,7 @@ export default function Resume({ darkMode, onDownloadResume }) {
 
                 {/* Skills */}
                 <div>
-                  <h4 className="text-xs font-extrabold uppercase tracking-wider text-blue-400 mb-2 border-b border-slate-800 pb-1">
+                  <h4 className="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-blue-400 mb-2 border-b border-slate-800 pb-1">
                     TECHNICAL SKILLS
                   </h4>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs">
